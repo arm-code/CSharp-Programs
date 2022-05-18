@@ -27,5 +27,17 @@ class Solution {
                 Console.WriteLine("Not found");
             }
         }
+        
+        /* other alternative
+        for(int j = 0; j < n; j++){
+            string search = Console.ReadLine();
+            if(dic.ContainsKey(search)){   
+                
+                Console.WriteLine(search + "=" + dic[search]);
+            }else{
+                Console.WriteLine("Not found");
+            }
+        }
+        */
     }
 }
