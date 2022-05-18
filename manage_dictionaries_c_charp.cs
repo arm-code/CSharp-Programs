@@ -16,28 +16,19 @@ class Solution {
             string value = Console.ReadLine();
             string [] words = value.Split(' ');
                 dic.Add(words[0], words[1]);            
-        }               
-        
-        for(int j = 0; j < n; j++){
-            string search = Console.ReadLine();
-            if(dic.TryGetValue(search, out string value)){   
-                
-                Console.WriteLine(search + "=" + value);
-            }else{
+        }  
+        String name;        
+        while (( name = Console.ReadLine()) != null)
+        {
+            try
+            {
+                Console.WriteLine($"{name}={PhoneBook[name]}");
+            }
+            catch
+            {
                 Console.WriteLine("Not found");
             }
         }
         
-        /* other alternative
-        for(int j = 0; j < n; j++){
-            string search = Console.ReadLine();
-            if(dic.ContainsKey(search)){   
-                
-                Console.WriteLine(search + "=" + dic[search]);
-            }else{
-                Console.WriteLine("Not found");
-            }
-        }
-        */
     }
 }
